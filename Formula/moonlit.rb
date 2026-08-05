@@ -1,25 +1,25 @@
 class Moonlit < Formula
   desc "Moonlit CLI: run release pipelines and render their execution."
   homepage "https://moonlitbuild.dev/"
-  version "1.1.4"
+  version "1.1.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.4/moonlit-aarch64-apple-darwin.tar.xz"
-      sha256 "bb65aa1811adbf71de676bb0b80648327ea802151f9bfa40207b6984dca10301"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.5/moonlit-aarch64-apple-darwin.tar.xz"
+      sha256 "088b3b96283339b2e0081bf36ca4d7a0357c188b4b9dc5b99a6dd915000cdb1a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.4/moonlit-x86_64-apple-darwin.tar.xz"
-      sha256 "87ab800cb5bf52f744e315c5ec56e493810bc7f4278758d61811352fcef3ff3c"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.5/moonlit-x86_64-apple-darwin.tar.xz"
+      sha256 "d6b499ed174535df8776c140399f07d65e4342bd2c87d8a5597ecb9961bc1d17"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.4/moonlit-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ba1ced478c008aee01c764d7e1b7bf1bf48767992433775fc2c42fbdeed2def4"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.5/moonlit-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "be040b9037735db42ec5515e5933f4d4d353bcf787e3d18fffc5d4faad74f50a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.4/moonlit-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "618fa4341a8473163853399a66de0da3297d69904b91425c858caed1849ea9e0"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.5/moonlit-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "deec22fe3e30546dc3af37c30f88361243117fc9d24d2f811132e209395a4057"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
