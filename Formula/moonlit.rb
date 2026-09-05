@@ -1,25 +1,25 @@
 class Moonlit < Formula
   desc "Moonlit CLI: run release pipelines and render their execution."
   homepage "https://moonlitbuild.dev/"
-  version "1.1.6"
+  version "1.1.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.6/moonlit-aarch64-apple-darwin.tar.xz"
-      sha256 "9d2264387e1bea2e75677692260018e6d18910cc30fce3020f6b27df8f21c043"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.7/moonlit-aarch64-apple-darwin.tar.xz"
+      sha256 "d41694961a5253e69cf6df5ea9f8d5b49195328de7e42d0ae1184f96c54b98b5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.6/moonlit-x86_64-apple-darwin.tar.xz"
-      sha256 "7507d71a7f6d63e6841fbbad61ebccb47964377924644e1f508c3f7143e19e9a"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.7/moonlit-x86_64-apple-darwin.tar.xz"
+      sha256 "ed9ebaf96c23ca5e82627cd18574b8bf0de2d69b5c4a572624d42350800f1488"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.6/moonlit-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9293484402b68ce283298cf9f54690bbe7ea2e690e6de4c7b299052b9b12742c"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.7/moonlit-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "18ca7a568bd095601c313ef5c983dab561c026f0848f9afb2bd7ffda56bd362c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.6/moonlit-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c806ef8e51398e9fdb26a0013a7d6da26e2f822d254ebded90d2adfbf9660fd9"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.1.7/moonlit-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3b8d63bdeb2908297f207b79831bf1ffbbd1dd9191994cfbaa016f4081dd9515"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -48,10 +48,18 @@ class Moonlit < Formula
   end
 
   def install
-    bin.install "moonlit" if OS.mac? && Hardware::CPU.arm?
-    bin.install "moonlit" if OS.mac? && Hardware::CPU.intel?
-    bin.install "moonlit" if OS.linux? && Hardware::CPU.arm?
-    bin.install "moonlit" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "moonlit"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "moonlit"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "moonlit"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "moonlit"
+    end
 
     install_binary_aliases!
 
