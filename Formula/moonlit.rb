@@ -1,25 +1,25 @@
 class Moonlit < Formula
   desc "Moonlit CLI: run release pipelines and render their execution."
-  homepage "https://moonlitbuild.dev/"
-  version "1.2.0"
+  homepage "https://moonlit.rs/"
+  version "2.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.2.0/moonlit-aarch64-apple-darwin.tar.xz"
-      sha256 "8e86d6160b5ada61e19bb7adf90617646bd2852c0c8e4e7e29dea2d98d75ea47"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v2.0.0/moonlit-aarch64-apple-darwin.tar.xz"
+      sha256 "aca7170d34af099bb641ba557785ea2a7c7847ccf9e02d4a3c84067dfe736e96"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.2.0/moonlit-x86_64-apple-darwin.tar.xz"
-      sha256 "fce5e3af356b7c28d48e03dcabffed95649ecd141f2cc31066b96b6f3d14dbe1"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v2.0.0/moonlit-x86_64-apple-darwin.tar.xz"
+      sha256 "12f8de7af4629225051a50e1cbf510c6306019430f3d2c05f47f9aa048ca3588"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.2.0/moonlit-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c46aec1c9d279211fc71097e1bd494bb39ddb2295ab92784fe29cd5ec368e222"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v2.0.0/moonlit-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8067255ae9db27f4b7b548a4a0275efa6a6116c2cd21b29857ccb2a928a5562d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v1.2.0/moonlit-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4bcef0060bc183da8edaff5adef0bbfe1799e758b75d5dcc4d7870f98db8768d"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v2.0.0/moonlit-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "62f61e2f7bc48f7cc7c130a1fb9b50d1343b51871bcbe24e00fc65dd16435123"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
