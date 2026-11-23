@@ -1,25 +1,25 @@
 class Moonlit < Formula
   desc "Moonlit CLI: run release pipelines and render their execution."
   homepage "https://moonlit.rs/"
-  version "3.0.3"
+  version "4.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v3.0.3/moonlit-aarch64-apple-darwin.tar.xz"
-      sha256 "f62316da0e1de139398b309d5c908d39e60641bde073ec93688410fb2015e78c"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v4.0.0/moonlit-aarch64-apple-darwin.tar.xz"
+      sha256 "4c5864b51467a1999d29c68a9f1e5a877017f081830bd8cf4aef07e60c2042eb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v3.0.3/moonlit-x86_64-apple-darwin.tar.xz"
-      sha256 "6a079b43207a8143eb38646e09a2ba49c923077bbf025c3e9ac37ac41b0d017b"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v4.0.0/moonlit-x86_64-apple-darwin.tar.xz"
+      sha256 "4a8a4b97ca9524eb2444466267a3d9c52983613fa67d2ebe0805a10b713f8b9a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v3.0.3/moonlit-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "925f201df0f419b7e04df8a8621fa4d468fcb16a8acdbffccb79a75cf870f22a"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v4.0.0/moonlit-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c421c3a88ada8a1265d4bd2995ce17f994a2075f9d6eb1047f2895377b30e9c6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v3.0.3/moonlit-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "94d057107adc02ff9332ed097f3cf31e60da725299018c68c1392925dc915cc6"
+      url "https://github.com/wolfware-labs/moonlit/releases/download/moonlit-v4.0.0/moonlit-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d42a9fc669576b48c9a6ace93f6fd39e9275092d7246fb30a4931c7076af20fe"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
